@@ -1,0 +1,15 @@
+---
+const { url } = Astro.props;
+---
+
+<a class="btn" href={url}><slot /></a>
+
+<style>
+  .btn {
+    background-color: lightblue;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+  }
+</style>

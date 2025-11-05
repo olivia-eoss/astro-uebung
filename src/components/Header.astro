@@ -1,5 +1,11 @@
+---
+import { Image } from "astro:assets";
+import header from "../assets/header.jpg";
+---
+
 <div>
-  <img src="/src/assets/header.jpg" alt="" />
+  <h1>{new Date()}</h1>
+  <Image src={header} alt="Blog Post Image" />
 </div>
 
 <style>
@@ -12,3 +18,14 @@
     height: auto;
   }
 </style>
+
+<script>
+  import { hi } from "../lib/utils.ts";
+  hi();
+
+  const titel = document.querySelector("h1");
+
+  titel!.addEventListener("click", () => {
+    alert("Hallo");
+  });
+</script>
