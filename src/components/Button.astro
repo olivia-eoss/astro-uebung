@@ -1,15 +1,24 @@
 ---
 const { url } = Astro.props;
+const { variant = "primary" } = Astro.props;
 ---
 
-<a class="btn" href={url}><slot /></a>
+<a class={`btn ${variant}`} href={url}><slot /></a>
 
 <style>
   .btn {
-    background-color: lightblue;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
-    color: black;
+  }
+
+  .btnPink {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+  }
+
+  .btnWith {
+    background: var(--color-secondary);
+    color: var(--color-primary);
   }
 </style>

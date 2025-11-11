@@ -1,9 +1,38 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import TwoColumns from "../components/TwoColumns.astro";
+import LayouztHeaderBild from "../layouts/LayouztHeaderBild.astro";
+import CategoryColumn from "../components/CategoryColumn.astro";
+import TextImgColum from "../components/TextImgColum.astro";
+import ausbildung from "../assets/ausbildung.jpg";
 ---
 
-<Layout>
-  <TwoColumns />
-  <p>Hallo Das ist eine Webseite über mich Selbst</p>
-</Layout>
+<LayouztHeaderBild>
+  <div>
+    <h1>Das bin ich</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+      sit amet.
+    </p>
+  </div>
+  <CategoryColumn />
+  <TextImgColum
+    image={ausbildung}
+    alt="Ausbildung Bild"
+    title="Meine Ausbildung"
+    text="Lorem ipsum dolor sit amet,consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+  />
+</LayouztHeaderBild>
+
+<style>
+  div {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+</style>

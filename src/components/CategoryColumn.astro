@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import reisenCategory from "../assets/reisenCategory.jpg";
+import ausbildung from "../assets/ausbildung.jpg";
+---
+
+<div class="twoColumn">
+  <div>
+    <Image src={reisenCategory} alt="This is a travel Category" />
+    <h2>reisen</h2>
+  </div>
+
+  <div>
+    <Image src={ausbildung} alt="This is a travel Category" />
+    <h2>Ausbildung</h2>
+  </div>
+</div>
+
+<style>
+  .twoColumn {
+    display: flex;
+    gap: auto;
+    justify-content: space-between;
+    margin: 2rem auto;
+    width: 50vw;
+  }
+
+  div div img {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+</style>

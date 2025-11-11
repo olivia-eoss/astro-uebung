@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+type props = {
+  image: ImageMetadata;
+  alt: string;
+  title: string;
+  text: string;
+};
+
+const { image, alt, title, text } = Astro.props as props;
+---
+
+<section class="feature">
+  <div class="image">
+    <Image src={image} alt={alt} />
+  </div>
+  <div class="content">
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+</section>
+
+<style>
+  .feature {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    margin: 2rem auto;
+  }
+
+  .image {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover; /* niemals verzerren */
+  }
+</style>
