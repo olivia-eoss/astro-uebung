@@ -1,8 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import TextImgColum from "../components/TextImgColum.astro";
+import Galerie from "../components/Galerie.astro";
+import reisen from "../assets/reisenCategory.jpg";
+import startseite from "../assets/startseite.jpg";
+import reisenCategory from "../assets/reisenCategory.jpg";
+import ausbildung from "../assets/ausbildung.jpg";
 ---
 
 <Layout>
-  <h1>Blog</h1>
-  <p>Hallo Das ist eine Webseite über mich Selbst</p>
+  <TextImgColum
+    image={reisen}
+    alt="ueber mich Bild"
+    title="Über mich und diese Seite"
+    text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et ."
+    buttonText="Mehr erfahren"
+    buttonLink="/ueber-mich-details"
+  />
+  <div class="p-max-with">
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+      sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+      diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+      erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+      rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+      dolor sit amet.
+    </p>
+  </div>
+  <Galerie
+    images={[
+      startseite,
+      reisenCategory,
+      ausbildung,
+      ausbildung,
+      ausbildung,
+      startseite,
+      startseite,
+    ]}
+  />
 </Layout>
