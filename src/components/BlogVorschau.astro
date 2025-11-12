@@ -1,0 +1,75 @@
+---
+import Button from "./Button.astro";
+---
+
+<h2>Usere Blog beiträge</h2>
+<div class="blogContainer">
+  <div>
+    <h3>Das ist h3 Titel</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At orem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+      diam nonumy eirmod tempor. consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor.consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+      m nonumy eirmod tempor.
+    </p>
+
+    <Button variant="secondary" href="/ueber-mich-details"> Hallo </Button>
+  </div>
+
+  <div>
+    <h3>Das ist h3 Titel</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At orem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+      diam nonumy eirmod tempor. consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor.consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+      m nonumy eirmod tempor.
+    </p>
+    <Button variant="secondary" href="/ueber-mich-details"> Hallo </Button>
+  </div>
+
+  <div>
+    <h3>Das ist h3 Titel</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At orem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+      diam nonumy eirmod tempor. consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor.consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+      m nonumy eirmod tempor.
+    </p>
+    <Button variant="secondary" href="/ueber-mich-details"> Hallo </Button>
+  </div>
+
+  <style>
+    .blogContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* beide Spalten gleich breit */
+      grid-template-rows: 1fr 1fr; /* zwei gleich hohe Reihen */
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .blogContainer div:not(:first-child) {
+      grid-column: span 2;
+    }
+
+    .blogContainer div:first-child {
+      grid-row: span 2;
+    }
+
+    .blogContainer div {
+      background-color: var(--color-primary);
+      padding: 1.5rem;
+      border-radius: 30px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: var(--color-secondary);
+    }
+  </style>
+</div>

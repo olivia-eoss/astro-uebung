@@ -1,12 +1,14 @@
 ---
 import LayouztHeaderBild from "../layouts/LayouztHeaderBild.astro";
 import CategoryColumn from "../components/CategoryColumn.astro";
+import Blog from "../components/BlogVorschau.astro";
 import TextImgColum from "../components/TextImgColum.astro";
 import Button from "../components/Button.astro";
 import ausbildung from "../assets/ausbildung.jpg";
+import startseite from "../assets/startseite.jpg";
 ---
 
-<LayouztHeaderBild>
+<LayouztHeaderBild title="Über mich" heroImage={startseite}>
   <div class="p-max-with">
     <h1>Das bin ich</h1>
     <p>
@@ -31,4 +33,5 @@ import ausbildung from "../assets/ausbildung.jpg";
     title="Meine Ausbildung"
     text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et ."
   />
+  <Blog />
 </LayouztHeaderBild>

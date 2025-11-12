@@ -26,11 +26,13 @@
     color: var(--color-primary);
   }
 
-  li {
+  header li,
+  footer li {
     list-style: none;
   }
 
-  ul {
+  header ul,
+  footer ul {
     list-style: none;
     display: flex;
     gap: 1rem;

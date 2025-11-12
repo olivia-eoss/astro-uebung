@@ -3,7 +3,7 @@ const { href } = Astro.props;
 const { variant = "primary" } = Astro.props;
 ---
 
-<a class={`btn ${variant}`} href={href}><slot /></a>
+<button class={`btn ${variant}`}><a href={href}><slot /></a></button>
 
 <style>
   .btn {
@@ -14,11 +14,22 @@ const { variant = "primary" } = Astro.props;
 
   .btn.primary {
     background: var(--color-primary);
+    border: none;
+    margin: 16px 0;
+  }
+
+  .btn.primary a {
     color: var(--color-secondary);
+    text-decoration: none;
+  }
+
+  .btn.secondary a {
+    color: var(--color-primary);
+    text-decoration: none;
   }
 
   .btn.secondary {
     background: var(--color-secondary);
-    color: var(--color-primary);
+    border: none;
   }
 </style>

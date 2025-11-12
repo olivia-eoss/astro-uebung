@@ -7,7 +7,7 @@ type props = {
   image: ImageMetadata;
   alt: string;
   title: string;
-  text: string;
+  text: string | string[];
   buttonText?: string;
   buttonLink?: string;
 };
@@ -22,7 +22,17 @@ const { image, alt, title, text, buttonText, buttonLink } =
   </div>
   <div class="content">
     <h2>{title}</h2>
-    <p>{text}</p>
+    {
+      Array.isArray(text) ? (
+        <ul>
+          {text.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>{text}</p>
+      )
+    }
     {
       buttonText && buttonLink && (
         <Button variant="primary" href={buttonLink}>
