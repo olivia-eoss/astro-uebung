@@ -1,8 +1,52 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Blog from "../../components/BlogVorschau.astro";
+import Button from "../../components/Button.astro";
+
+interface BlogPost {
+  frontmatter: {
+    title: string;
+    excerpt: string;
+    date?: string;
+  };
+  url: string;
+}
+const posts = await Astro.glob("./*.astro");
 ---
 
-<Layout>
-  <Blog />
+<Layout title="Blog Übersicht">
+  <div class="blogContainer">
+    {
+      posts.map((post) => (
+        <div>
+          <h2>{post.frontmatter.title}</h2>
+          <p>{post.frontmatter.excerpt}</p>
+          <Button variant="secondary" href={post.url}>
+            Read More
+          </Button>
+        </div>
+      ))
+    }
+  </div>
 </Layout>
+
+<style>
+  .blogContainer div {
+    background-color: var(--color-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .blogContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* beide Spalten gleich breit */
+    gap: 2rem;
+    align-items: stretch;
+    margin: 16px;
+  }
+
+  h2 {
+    color: var(--color-secondary);
+  }
+</style>
